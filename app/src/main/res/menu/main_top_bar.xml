@@ -6,8 +6,4 @@
         android:title="History"
         android:icon="@drawable/ic_top_bar_history_open"
         app:showAsAction="ifRoom"/>
-
-    <item android:id="@+id/menu_settings"
-        android:title="Settings"
-        app:showAsAction="never"/>
 </menu>
