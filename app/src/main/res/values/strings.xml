@@ -1,12 +1,16 @@
 <resources>
-    <string name="app_name">myCalc</string>
+    <string name="app_name">Calculator</string>
     <!-- Display -->
     <string name="display_first_operand">first operand</string>
     <string name="display_second_operand">second operand</string>
     <string name="display_operation_result">operation result</string>
 
-    <!-- Navigation -->
-    <string name="nav_button_back">back</string>
+    <!-- Top bar -->
+    <string name="top_bar_button_back">back</string>
+    <string name="top_bar_button_history">open history</string>
+    <string name="top_bar_button_history_clear">clear history</string>
+    <string name="top_bar_title_history">History</string>
+    <string name="top_bar_title_main">Calculator</string>
 
     <!-- Keyboard -->
     <string name="keyboard_number_zero">0</string>
@@ -50,9 +54,6 @@
     <string name="scientific_keyboard_one_div_x">1 divided by x</string>
 
     <!-- History -->
-    <string name="history_nav_button">go to history</string>
-    <string name="history_nav_button_delete">clear history</string>
-    <string name="history_activity_title">History</string>
     <string name="history_button_item_copy_operation">copy operation from history</string>
     <string name="history_button_item_delete_operation">delete operation from history</string>
     <string name="history_toast_empty_message">History empty!</string>
