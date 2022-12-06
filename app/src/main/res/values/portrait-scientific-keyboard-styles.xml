@@ -15,6 +15,6 @@
 
     <style name="myCalc.portraitScientificButton" parent="myCalc.operatorsButton">
         <item name="shapeAppearance">@style/myCalc.shapeAppearancePortraitComponent</item>
-        <item name="rippleColor">?attr/colorSecondary</item>
+        <item name="rippleColor">?attr/colorControlHighlight</item>
     </style>
 </resources>
