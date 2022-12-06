@@ -1,0 +1,14 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.MyCalc" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimaryDark">@color/light_app_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimary">@color/light_app_bg</item>
+        <item name="colorOnBackground">@color/light_result_text</item>
+        <item name="colorSurface">@color/light_container_bg</item>
+        <item name="colorOnPrimary">@color/light_keys_text</item>
+        <item name="colorSecondary">@color/light_operator_buttons</item>
+        <item name="materialAlertDialogTheme">@style/myCalc.dialogTheme</item>
+        <item name="toolbarStyle">@style/myCalc.Toolbar</item>
+    </style>
+</resources>

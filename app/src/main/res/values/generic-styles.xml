@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Top bar. -->
+    <style name="myCalc.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="materialThemeOverlay">@style/myCalc.ThemeOverlay.Toolbar</item>
+        <item name="titleTextAppearance">@style/myCalc.Toolbar.TitleLarge</item>
+        <item name="subtitleTextAppearance">@style/myCalc.Toolbar.TitleMedium</item>
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>
+
+    <style name="myCalc.ThemeOverlay.Toolbar" parent="">
+        <item name="colorControlNormal">?attr/colorSecondary</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="myCalc.Toolbar.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="myCalc.Toolbar.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="myCalc.topButton" parent="myCalc.operatorsButton">
+        <item name="android:background">@drawable/bg_top_button_ripple</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
+
+    <style name="myCalc.topTitle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <!-- Display. -->
+    <style name="myCalc.operationText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:background">@drawable/bg_operand_ripple</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!-- Keyboard. -->
+    <style name="myCalc.keyboardContainer" parent="">
+        <item name="android:background">@drawable/bg_portrait_keyboard</item>
+    </style>
+
+    <style name="myCalc.keyButton" parent="Widget.Material3.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:backgroundTint">?attr/colorPrimary</item>
+        <item name="rippleColor">?attr/colorSecondary</item>
+    </style>
+
+    <style name="myCalc.operatorsButton" parent="myCalc.keyButton">
+        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconTint">?attr/colorSecondary</item>
+        <item name="rippleColor">?attr/colorSecondary</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <!-- Dialogs. -->
+    <style name="myCalc.dialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="materialAlertDialogTitleTextStyle">@style/myCalc.dialogTitleTextStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+    </style>
+
+    <style name="myCalc.dialogTitleTextStyle" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BodyTextStyle" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="rippleColor">@color/white_ripple</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="rippleColor">@color/white_ripple</item>
+    </style>
+</resources>

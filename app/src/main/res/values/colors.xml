@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- default colors. -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_ripple">#D5D5D5</color>
+    <color name="operands_text">#647382</color>
+
+    <!-- light colors. -->
+    <!-- app bg. -->
+    <color name="light_app_bg">#FFFFFF</color>
+    <!-- keyboard bg. -->
+    <color name="light_container_bg">#ECF9FF</color>
+    <!-- keys text color. -->
+    <color name="light_keys_text">#FF000000</color>
+    <!-- operators text color. -->
+    <color name="light_operator_buttons">#43A047</color>
+    <!-- operands and results. -->
+    <color name="light_result_text">#FF000000</color>
+
+    <!-- dark colors. -->
+    <!-- app bg. -->
+    <color name="dark_app_bg">#14171E</color>
+    <!-- keyboard bg. -->
+    <color name="dark_container_bg">#1A1D24</color>
+    <!-- keys text color. -->
+    <color name="dark_keys_text">#FFFFFFFF</color>
+    <!-- operators text color. -->
+    <color name="dark_operator_buttons">#43A047</color>
+    <!-- operands and results. -->
+    <color name="dark_result_text">#FFFFFFFF</color>
+</resources>

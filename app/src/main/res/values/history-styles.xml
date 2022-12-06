@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Container. -->
+    <style name="myCalc.itemContainer" parent="">
+        <item name="android:background">@drawable/bg_history_item_ripple</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <!-- Operation. -->
+    <style name="myCalc.operatorTextHistory" parent="myCalc.operationText">
+        <item name="android:background" />
+        <item name="android:textSize">25sp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+
+    <style name="myCalc.operationTextHistory" parent="myCalc.operatorTextHistory">
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="myCalc.operationResultTextHistory" parent="myCalc.operationTextHistory">
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <style name="myCalc.equalTextHistory" parent="myCalc.operationResultTextHistory">
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+
+    <!-- Bottom buttons. -->
+    <style name="myCalc.bottomButton" parent="myCalc.operatorsButton">
+        <item name="android:background">@drawable/bg_history_bottom_button_ripple</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+</resources>

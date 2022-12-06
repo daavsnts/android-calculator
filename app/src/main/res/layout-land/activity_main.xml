@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_app"
+        tools:context=".view.activities.MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/display_ConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal_divisor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_history"
+                style="@style/myCalc.topButton"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/history_nav_button"
+                app:icon="@drawable/ic_top_bar_history_open"
+                app:iconSize="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_first_operand"
+                style="@style/myCalc.landOperationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/display_first_operand"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/text_operator"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_operator"
+                style="@style/myCalc.landOperatorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/text_second_operand"
+                app:layout_constraintTop_toTopOf="@+id/text_first_operand" />
+
+            <TextView
+                android:id="@+id/text_second_operand"
+                style="@style/myCalc.landOperationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/display_second_operand"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_operator"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/text_equal"
+                style="@style/myCalc.landEqualText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="45sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_operation_result"
+                app:layout_constraintEnd_toStartOf="@+id/text_operation_result"
+                app:layout_constraintTop_toTopOf="@+id/text_operation_result" />
+
+            <TextView
+                android:id="@+id/text_operation_result"
+                style="@style/myCalc.landOperationResultText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="35sp"
+                android:contentDescription="@string/display_operation_result"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_second_operand" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_horizontal_divisor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/keyboard_container_constraint_layout"
+            style="@style/myCalc.landKeyboardContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vertical_divider"
+            app:layout_constraintTop_toTopOf="@+id/guideline_horizontal_divisor"
+            app:layout_constraintVertical_bias="1.0">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_equal"
+                style="@style/myCalc.landEqualButton"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/keyboard_operator_equal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_plus"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_dot"
+                app:layout_constraintTop_toBottomOf="@+id/button_n3"
+                tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_polarity"
+                style="@style/myCalc.landOperatorsButton"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/keyboard_operator_polarity"
+                app:icon="@drawable/ic_operator_polarity"
+                app:iconSize="35dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_n7"
+                app:layout_constraintEnd_toStartOf="@+id/button_pow"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_pow"
+                style="@style/myCalc.landOperatorsButton"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/keyboard_operator_pow"
+                app:icon="@drawable/ic_operator_pow"
+                app:iconSize="35dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_n8"
+                app:layout_constraintEnd_toStartOf="@+id/button_ac"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_polarity"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_ac"
+                style="@style/myCalc.landOperatorsButton"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/keyboard_operator_ac"
+                app:icon="@drawable/ic_operator_ac"
+                app:iconSize="35dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_n9"
+                app:layout_constraintEnd_toStartOf="@+id/button_backspace"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_pow"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_backspace"
+                style="@style/myCalc.landOperatorsButton"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/keyboard_operator_backspace"
+                app:icon="@drawable/ic_operator_backspace"
+                app:iconSize="25dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_divisor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_ac"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_n7"
+                style="@style/myCalc.landNumbersButton"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/keyboard_number_seven"
+                app:layout_constraintBottom_toTopOf="@+id/button_n4"
+                app:layout_constraintEnd_toStartOf="@+id/button_n8"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_polarity" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_n4"
+                style="@style/myCalc.landNumbersButton"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/keyboard_number_four"
+                app:layout_constraintBottom_toTopOf="@+id/button_n1"
+                app:layout_constraintEnd_toStartOf="@+id/button_n5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_n7" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_n1"
+                style="@style/myCalc.landNumbersButton"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/keyboard_number_one"
+                app:layout_constraintBottom_toTopOf="@+id/button_n0"
+                app:layout_constraintEnd_toStartOf="@+id/button_n2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_n4" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_n0"
+                style="@style/myCalc.landNumbersButton"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/keyboard_number_zero"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_dot"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_n1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_n8"
+                style="@style/myCalc.landNumbersButton"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/keyboard_number_eight"
+                app:layout_constraintBottom_toTopOf="@+id/button_n5"
+                app:layout_constraintEnd_toStartOf="@+id/button_n9"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_n7"
+                app:layout_constraintTop_toBottomOf="@+id/button_pow" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_n5"
+                style="@style/myCalc.landNumbersButton"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/keyboard_number_five"
+                app:layout_constraintBottom_toTopOf="@+id/button_n2"
+                app:layout_constraintEnd_toStartOf="@+id/button_n6"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_n4"
+                app:layout_constraintTop_toBottomOf="@+id/button_n8" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_n2"
+                style="@style/myCalc.landNumbersButton"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/keyboard_number_two"
+                app:layout_constraintBottom_toTopOf="@+id/button_dot"
+                app:layout_constraintEnd_toStartOf="@+id/button_n3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_n1"
+                app:layout_constraintTop_toBottomOf="@+id/button_n5" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_dot"
+                style="@style/myCalc.landNumbersButton"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/keyboard_dot"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_equal"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_n0"
+                app:layout_constraintTop_toBottomOf="@+id/button_n2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_n9"
+                style="@style/myCalc.landNumbersButton"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/keyboard_number_nine"
+                app:layout_constraintBottom_toTopOf="@+id/button_n6"
+                app:layout_constraintEnd_toStartOf="@+id/button_divisor"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_n8"
+                app:layout_constraintTop_toBottomOf="@+id/button_ac" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_n6"
+                style="@style/myCalc.landNumbersButton"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/keyboard_number_six"
+                app:layout_constraintBottom_toTopOf="@+id/button_n3"
+                app:layout_constraintEnd_toStartOf="@+id/button_multiply"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_n5"
+                app:layout_constraintTop_toBottomOf="@+id/button_n9" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_n3"
+                style="@style/myCalc.landNumbersButton"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/keyboard_number_three"
+                app:layout_constraintBottom_toTopOf="@+id/button_equal"
+                app:layout_constraintEnd_toStartOf="@+id/button_minus"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_n2"
+                app:layout_constraintTop_toBottomOf="@+id/button_n6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_divisor"
+                style="@style/myCalc.landOperatorsButton"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/keyboard_operator_divide"
+                app:icon="@drawable/ic_operator_divide"
+                app:iconSize="35dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_multiply"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_n9"
+                app:layout_constraintTop_toBottomOf="@+id/button_backspace" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_multiply"
+                style="@style/myCalc.landOperatorsButton"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/keyboard_operator_multiply"
+                app:icon="@drawable/ic_operator_multiply"
+                app:iconSize="30dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_minus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_n6"
+                app:layout_constraintTop_toBottomOf="@+id/button_divisor" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_minus"
+                style="@style/myCalc.landOperatorsButton"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/keyboard_operator_minus"
+                app:icon="@drawable/ic_operator_minus"
+                app:iconSize="33dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_plus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_n3"
+                app:layout_constraintTop_toBottomOf="@+id/button_multiply" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_plus"
+                style="@style/myCalc.landOperatorsButton"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="@string/keyboard_operator_plus"
+                app:icon="@drawable/ic_operator_plus"
+                app:iconSize="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_equal"
+                app:layout_constraintTop_toBottomOf="@+id/button_minus" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/keyboard_features_constraint_layout"
+            style="@style/myCalc.landScientificKeyboardContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/display_ConstraintLayout">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_square"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/scientific_keyboard_square"
+                app:icon="@drawable/ic_scientific_x_pow_two"
+                app:iconSize="35dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_sine"
+                app:layout_constraintEnd_toStartOf="@+id/button_cube"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_ten_pow"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/scientific_keyboard_ten_pow"
+                app:icon="@drawable/ic_scientific_ten_pow_x"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_tan"
+                app:layout_constraintEnd_toStartOf="@+id/button_ln"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_cube"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_ln"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/scientific_keyboard_ln"
+                app:icon="@drawable/ic_scientific_ln"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_log_ten"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_ten_pow"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_sine"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+
+                android:contentDescription="@string/scientific_keyboard_sine"
+                app:icon="@drawable/ic_scientific_sin"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_sqrt"
+                app:layout_constraintEnd_toStartOf="@+id/button_cos"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_square" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_cos"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/scientific_keyboard_cos"
+                app:icon="@drawable/ic_scientific_cos"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_round"
+                app:layout_constraintEnd_toStartOf="@+id/button_tan"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_sine"
+                app:layout_constraintTop_toBottomOf="@+id/button_cube" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_tan"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/scientific_keyboard_tan"
+                app:icon="@drawable/ic_scientific_tan"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_pi"
+                app:layout_constraintEnd_toStartOf="@+id/button_log_ten"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_cos"
+                app:layout_constraintTop_toBottomOf="@+id/button_ten_pow" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_log_ten"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/scientific_keyboard_log_ten"
+                app:icon="@drawable/ic_scientific_log_base_ten"
+                app:iconSize="50dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_euler"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_tan"
+                app:layout_constraintTop_toBottomOf="@+id/button_ln" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_sqrt"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/scientific_keyboard_square_root"
+                app:icon="@drawable/ic_scientific_sqrt"
+                app:iconSize="50dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_percent"
+                app:layout_constraintEnd_toStartOf="@+id/button_round"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_sine" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_round"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/scientific_keyboard_round"
+                app:icon="@drawable/ic_scientific_rnd"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_factorial"
+                app:layout_constraintEnd_toStartOf="@+id/button_pi"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_sqrt"
+                app:layout_constraintTop_toBottomOf="@+id/button_cos" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_pi"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/scientific_keyboard_pi"
+                app:icon="@drawable/ic_scientific_pi"
+                app:iconSize="45dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_mod"
+                app:layout_constraintEnd_toStartOf="@+id/button_euler"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_round"
+                app:layout_constraintTop_toBottomOf="@+id/button_tan" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_euler"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/scientific_keyboard_euler"
+                app:icon="@drawable/ic_scientific_euler"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_one_div_x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_pi"
+                app:layout_constraintTop_toBottomOf="@+id/button_log_ten" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_percent"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="@string/scientific_keyboard_percent"
+                app:icon="@drawable/ic_scientific_percent"
+                app:iconSize="45dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_factorial"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_sqrt" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_factorial"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="@string/scientific_keyboard_factorial"
+                app:icon="@drawable/ic_scientific_factorial"
+                app:iconSize="45dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_mod"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_percent"
+                app:layout_constraintTop_toBottomOf="@+id/button_round" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_mod"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="@string/scientific_keyboard_operator_mod"
+                app:icon="@drawable/ic_scientific_mod"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_one_div_x"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_factorial"
+                app:layout_constraintTop_toBottomOf="@+id/button_pi" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_cube"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/scientific_keyboard_cube"
+                app:icon="@drawable/ic_scientific_x_pow_three"
+                app:iconSize="35dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_cos"
+                app:layout_constraintEnd_toStartOf="@+id/button_ten_pow"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_square"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_one_div_x"
+                style="@style/myCalc.landScientificButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="@string/scientific_keyboard_one_div_x"
+                app:icon="@drawable/ic_scientific_one_div_x"
+                app:iconSize="45dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_mod"
+                app:layout_constraintTop_toBottomOf="@+id/button_euler" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">myCalc</string>
+    <!-- Display -->
+    <string name="display_first_operand">first operand</string>
+    <string name="display_second_operand">second operand</string>
+    <string name="display_operation_result">operation result</string>
+
+    <!-- Navigation -->
+    <string name="nav_button_back">back</string>
+
+    <!-- Keyboard -->
+    <string name="keyboard_number_zero">0</string>
+    <string name="keyboard_number_one">1</string>
+    <string name="keyboard_number_two">2</string>
+    <string name="keyboard_number_three">3</string>
+    <string name="keyboard_number_four">4</string>
+    <string name="keyboard_number_five">5</string>
+    <string name="keyboard_number_six">6</string>
+    <string name="keyboard_number_seven">7</string>
+    <string name="keyboard_number_eight">8</string>
+    <string name="keyboard_number_nine">9</string>
+    <string name="keyboard_operator_equal">=</string>
+    <string name="keyboard_dot">.</string>
+    <string name="keyboard_operator_pow">pow</string>
+    <string name="keyboard_operator_ac">ac</string>
+    <string name="keyboard_operator_polarity">polarity</string>
+    <string name="keyboard_operator_divide">divide</string>
+    <string name="keyboard_operator_multiply">multiply</string>
+    <string name="keyboard_operator_plus">plus</string>
+    <string name="keyboard_operator_backspace">backspace</string>
+    <string name="keyboard_operator_minus">minus</string>
+
+    <!-- Scientific keyboard -->
+    <string name="scientific_keyboard_open">open scientific keyboard</string>
+    <string name="scientific_keyboard_percent">percent</string>
+    <string name="scientific_keyboard_sine">sine</string>
+    <string name="scientific_keyboard_log_ten">log base ten</string>
+    <string name="scientific_keyboard_euler">euler number</string>
+    <string name="scientific_keyboard_operator_mod">mod operator</string>
+    <string name="scientific_keyboard_factorial">factorial</string>
+    <string name="scientific_keyboard_ten_pow">ten pow</string>
+    <string name="scientific_keyboard_pi">pi number</string>
+    <string name="scientific_keyboard_square">square</string>
+    <string name="scientific_keyboard_round">round</string>
+    <string name="scientific_keyboard_ln">natural logarithm</string>
+    <string name="scientific_keyboard_cos">cosine</string>
+    <string name="scientific_keyboard_tan">tangent</string>
+    <string name="scientific_keyboard_cube">cube</string>
+    <string name="scientific_keyboard_square_root">square root</string>
+    <string name="scientific_keyboard_one_div_x">1 divided by x</string>
+
+    <!-- History -->
+    <string name="history_nav_button">go to history</string>
+    <string name="history_nav_button_delete">clear history</string>
+    <string name="history_activity_title">History</string>
+    <string name="history_button_item_copy_operation">copy operation from history</string>
+    <string name="history_button_item_delete_operation">delete operation from history</string>
+    <string name="history_toast_empty_message">History empty!</string>
+    <string name="history_dialog_delete_operation_title">Delete operation from history?</string>
+    <string name="history_dialog_confirm">Yes</string>
+    <string name="history_dialog_deny">No</string>
+    <string name="history_dialog_operation_deleted_confirmation_message">Operation deleted!</string>
+    <string name="history_dialog_clear_history_title">Clear history?</string>
+    <string name="history_toast_cleared_message">History cleared!</string>
+
+    <!-- Clipboard -->
+    <string name="clipboard_copied_message">Copied!</string>
+</resources>

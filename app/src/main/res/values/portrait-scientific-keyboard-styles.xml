@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Keyboard features. -->
+    <style name="myCalc.portraitScientificNavButton" parent="">
+        <item name="android:background">@drawable/bg_portrait_scientific_nav_arrow_ripple</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="iconTint">@color/white</item>
+        <item name="iconSize">20dp</item>
+        <item name="iconGravity">textTop</item>
+    </style>
+
+    <style name="myCalc.portraitScientificContainer" parent="">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="myCalc.portraitScientificButton" parent="myCalc.operatorsButton">
+        <item name="shapeAppearance">@style/myCalc.shapeAppearancePortraitComponent</item>
+        <item name="rippleColor">?attr/colorSecondary</item>
+    </style>
+</resources>

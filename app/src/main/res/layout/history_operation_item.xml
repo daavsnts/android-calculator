@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_container_constraint_layout"
+        style="@style/myCalc.itemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/text_first_operand_item"
+            style="@style/myCalc.operationTextHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_operator_item"
+            style="@style/myCalc.operatorTextHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/text_second_operand_item"
+            app:layout_constraintEnd_toStartOf="@+id/text_second_operand_item"
+            app:layout_constraintTop_toTopOf="@+id/text_second_operand_item" />
+
+        <TextView
+            android:id="@+id/text_second_operand_item"
+            style="@style/myCalc.operationTextHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_first_operand_item" />
+
+        <TextView
+            android:id="@+id/text_equal_item"
+            style="@style/myCalc.equalTextHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/keyboard_operator_equal"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_operation_result_item"
+            app:layout_constraintEnd_toStartOf="@+id/text_operation_result_item"
+            app:layout_constraintTop_toTopOf="@+id/text_operation_result_item" />
+
+        <TextView
+            android:id="@+id/text_operation_result_item"
+            style="@style/myCalc.operationResultTextHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_second_operand_item" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_copy_operation"
+            style="@style/myCalc.bottomButton"
+            android:contentDescription="@string/history_button_item_copy_operation"
+            app:icon="@drawable/ic_history_item_copy"
+            app:iconSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_delete_operation"
+            style="@style/myCalc.bottomButton"
+            android:layout_marginStart="5dp"
+            android:contentDescription="@string/history_button_item_delete_operation"
+            app:icon="@drawable/ic_history_item_delete"
+            app:iconSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_copy_operation"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

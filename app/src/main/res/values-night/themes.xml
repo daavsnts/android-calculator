@@ -1,0 +1,12 @@
+<resources>
+    <!-- Dark application theme. -->
+    <style name="Theme.MyCalc" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/dark_app_bg</item>
+        <item name="colorOnBackground">@color/dark_result_text</item>
+        <item name="colorSurface">@color/dark_container_bg</item>
+        <item name="colorOnPrimary">@color/dark_keys_text</item>
+        <item name="colorSecondary">@color/dark_operator_buttons</item>
+        <item name="materialAlertDialogTheme">@style/myCalc.dialogTheme</item>
+        <item name="toolbarStyle">@style/myCalc.Toolbar</item>
+    </style>
+</resources>

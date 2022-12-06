@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/keyboard_container_constraint_layout"
+        style="@style/myCalc.portraitKeyboardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".view.fragments.PortraitKeyboardFragment">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_equal"
+            style="@style/myCalc.portraitEqualButton"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="false"
+            android:text="@string/keyboard_operator_equal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_plus"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_dot"
+            app:layout_constraintTop_toBottomOf="@+id/button_n3"
+            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_polarity"
+            style="@style/myCalc.portraitOperatorsButton"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:contentDescription="@string/keyboard_operator_polarity"
+            app:icon="@drawable/ic_operator_polarity"
+            app:iconSize="45dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_n7"
+            app:layout_constraintEnd_toStartOf="@+id/button_pow"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_pow"
+            style="@style/myCalc.portraitOperatorsButton"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:contentDescription="@string/keyboard_operator_pow"
+            app:icon="@drawable/ic_operator_pow"
+            app:iconSize="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_n8"
+            app:layout_constraintEnd_toStartOf="@+id/button_ac"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_polarity"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_ac"
+            style="@style/myCalc.portraitOperatorsButton"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:contentDescription="@string/keyboard_operator_ac"
+            app:icon="@drawable/ic_operator_ac"
+            app:iconSize="45dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_n9"
+            app:layout_constraintEnd_toStartOf="@+id/button_backspace"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_pow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_backspace"
+            style="@style/myCalc.portraitOperatorsButton"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:contentDescription="@string/keyboard_operator_backspace"
+            app:icon="@drawable/ic_operator_backspace"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_divisor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_ac"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_n7"
+            style="@style/myCalc.portraitNumbersButton"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:text="@string/keyboard_number_seven"
+            app:layout_constraintBottom_toTopOf="@+id/button_n4"
+            app:layout_constraintEnd_toStartOf="@+id/button_n8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_polarity" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_n4"
+            style="@style/myCalc.portraitNumbersButton"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:text="@string/keyboard_number_four"
+            app:layout_constraintBottom_toTopOf="@+id/button_n1"
+            app:layout_constraintEnd_toStartOf="@+id/button_n5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_n7" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_n1"
+            style="@style/myCalc.portraitNumbersButton"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:text="@string/keyboard_number_one"
+            app:layout_constraintBottom_toTopOf="@+id/button_n0"
+            app:layout_constraintEnd_toStartOf="@+id/button_n2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_n4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_n0"
+            style="@style/myCalc.portraitNumbersButton"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="false"
+            android:text="@string/keyboard_number_zero"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_dot"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_n1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_n8"
+            style="@style/myCalc.portraitNumbersButton"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:text="@string/keyboard_number_eight"
+            app:layout_constraintBottom_toTopOf="@+id/button_n5"
+            app:layout_constraintEnd_toStartOf="@+id/button_n9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_n7"
+            app:layout_constraintTop_toBottomOf="@+id/button_pow" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_n5"
+            style="@style/myCalc.portraitNumbersButton"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:text="@string/keyboard_number_five"
+            app:layout_constraintBottom_toTopOf="@+id/button_n2"
+            app:layout_constraintEnd_toStartOf="@+id/button_n6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_n4"
+            app:layout_constraintTop_toBottomOf="@+id/button_n8" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_n2"
+            style="@style/myCalc.portraitNumbersButton"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:text="@string/keyboard_number_two"
+            app:layout_constraintBottom_toTopOf="@+id/button_dot"
+            app:layout_constraintEnd_toStartOf="@+id/button_n3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_n1"
+            app:layout_constraintTop_toBottomOf="@+id/button_n5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_dot"
+            style="@style/myCalc.portraitNumbersButton"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="false"
+            android:text="@string/keyboard_dot"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_equal"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_n0"
+            app:layout_constraintTop_toBottomOf="@+id/button_n2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_n9"
+            style="@style/myCalc.portraitNumbersButton"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:text="@string/keyboard_number_nine"
+            app:layout_constraintBottom_toTopOf="@+id/button_n6"
+            app:layout_constraintEnd_toStartOf="@+id/button_divisor"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_n8"
+            app:layout_constraintTop_toBottomOf="@+id/button_ac" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_n6"
+            style="@style/myCalc.portraitNumbersButton"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:text="@string/keyboard_number_six"
+            app:layout_constraintBottom_toTopOf="@+id/button_n3"
+            app:layout_constraintEnd_toStartOf="@+id/button_multiply"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_n5"
+            app:layout_constraintTop_toBottomOf="@+id/button_n9" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_n3"
+            style="@style/myCalc.portraitNumbersButton"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:text="@string/keyboard_number_three"
+            app:layout_constraintBottom_toTopOf="@+id/button_equal"
+            app:layout_constraintEnd_toStartOf="@+id/button_minus"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_n2"
+            app:layout_constraintTop_toBottomOf="@+id/button_n6" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_divisor"
+            style="@style/myCalc.portraitOperatorsButton"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:contentDescription="@string/keyboard_operator_divide"
+            app:icon="@drawable/ic_operator_divide"
+            app:iconSize="45dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_multiply"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_n9"
+            app:layout_constraintTop_toBottomOf="@+id/button_backspace" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_multiply"
+            style="@style/myCalc.portraitOperatorsButton"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:contentDescription="@string/keyboard_operator_multiply"
+            app:icon="@drawable/ic_operator_multiply"
+            app:iconSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_minus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_n6"
+            app:layout_constraintTop_toBottomOf="@+id/button_divisor" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_minus"
+            style="@style/myCalc.portraitOperatorsButton"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:contentDescription="@string/keyboard_operator_minus"
+            app:icon="@drawable/ic_operator_minus"
+            app:iconSize="43dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_plus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_n3"
+            app:layout_constraintTop_toBottomOf="@+id/button_multiply" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_plus"
+            style="@style/myCalc.portraitOperatorsButton"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="false"
+            android:contentDescription="@string/keyboard_operator_plus"
+            app:icon="@drawable/ic_operator_plus"
+            app:iconSize="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_equal"
+            app:layout_constraintTop_toBottomOf="@+id/button_minus" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

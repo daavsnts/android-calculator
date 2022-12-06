@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/features_keys_constraint_layout"
+        style="@style/myCalc.portraitScientificContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".view.fragments.PortraitScientificKeyboardFragment">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_square"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/scientific_keyboard_square"
+            app:icon="@drawable/ic_scientific_x_pow_two"
+            app:iconSize="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_ln"
+            app:layout_constraintEnd_toStartOf="@+id/button_cube"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_cube"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/scientific_keyboard_cube"
+            app:icon="@drawable/ic_scientific_x_pow_three"
+            app:iconSize="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_sine"
+            app:layout_constraintEnd_toStartOf="@+id/button_ten_pow"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_square"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_ten_pow"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/scientific_keyboard_ten_pow"
+            app:icon="@drawable/ic_scientific_ten_pow_x"
+            app:iconSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_cos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_cube"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_ln"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/scientific_keyboard_cos"
+            app:icon="@drawable/ic_scientific_cos"
+            app:iconSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_tan"
+            app:layout_constraintEnd_toStartOf="@+id/button_sine"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_square" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_sine"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/scientific_keyboard_tan"
+            app:icon="@drawable/ic_scientific_tan"
+            app:iconSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_log_ten"
+            app:layout_constraintEnd_toStartOf="@+id/button_cos"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_ln"
+            app:layout_constraintTop_toBottomOf="@+id/button_cube" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_cos"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/scientific_keyboard_sine"
+            app:icon="@drawable/ic_scientific_sin"
+            app:iconSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_sqrt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_sine"
+            app:layout_constraintTop_toBottomOf="@+id/button_ten_pow" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_tan"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/scientific_keyboard_ln"
+            app:icon="@drawable/ic_scientific_ln"
+            app:iconSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_round"
+            app:layout_constraintEnd_toStartOf="@+id/button_log_ten"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_ln" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_log_ten"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/scientific_keyboard_log_ten"
+            app:icon="@drawable/ic_scientific_log_base_ten"
+            app:iconSize="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_pi"
+            app:layout_constraintEnd_toStartOf="@+id/button_sqrt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_tan"
+            app:layout_constraintTop_toBottomOf="@+id/button_sine" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_sqrt"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/scientific_keyboard_square_root"
+            app:icon="@drawable/ic_scientific_sqrt"
+            app:iconSize="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_euler"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_log_ten"
+            app:layout_constraintTop_toBottomOf="@+id/button_cos" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_round"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/scientific_keyboard_round"
+            app:icon="@drawable/ic_scientific_rnd"
+            app:iconSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_percent"
+            app:layout_constraintEnd_toStartOf="@+id/button_pi"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_tan" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_pi"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/scientific_keyboard_pi"
+            app:icon="@drawable/ic_scientific_pi"
+            app:iconSize="45dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_factorial"
+            app:layout_constraintEnd_toStartOf="@+id/button_euler"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_round"
+            app:layout_constraintTop_toBottomOf="@+id/button_log_ten" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_euler"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/scientific_keyboard_euler"
+            app:icon="@drawable/ic_scientific_euler"
+            app:iconSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_mod"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_pi"
+            app:layout_constraintTop_toBottomOf="@+id/button_sqrt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_percent"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/scientific_keyboard_percent"
+            app:icon="@drawable/ic_scientific_percent"
+            app:iconSize="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_factorial"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_round" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_factorial"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/scientific_keyboard_factorial"
+            app:icon="@drawable/ic_scientific_factorial"
+            app:iconSize="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_mod"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_percent"
+            app:layout_constraintTop_toBottomOf="@+id/button_pi" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_mod"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/scientific_keyboard_operator_mod"
+            app:icon="@drawable/ic_scientific_mod"
+            app:iconSize="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_factorial"
+            app:layout_constraintTop_toBottomOf="@+id/button_euler" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

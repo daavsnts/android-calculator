@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Display. -->
+    <style name="myCalc.landOperationText" parent="myCalc.operationText">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="myCalc.landOperatorText" parent="myCalc.landOperationText">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+
+    <style name="myCalc.landOperationResultText" parent="myCalc.landOperationText">
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <style name="myCalc.landEqualText" parent="myCalc.landOperationResultText">
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <!-- Keyboard. -->
+    <style name="myCalc.shapeAppearanceLandComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <style name="myCalc.landKeyboardContainer" parent="">
+        <item name="android:background">@drawable/bg_land_keyboard_container</item>
+    </style>
+
+    <style name="myCalc.landKeyButton" parent="myCalc.keyButton">
+        <item name="shapeAppearance">@style/myCalc.shapeAppearanceLandComponent</item>
+    </style>
+
+    <style name="myCalc.landNumbersButton" parent="myCalc.landKeyButton">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="myCalc.landEqualButton" parent="myCalc.landNumbersButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="rippleColor">@color/white_ripple</item>
+        <item name="android:backgroundTint">?attr/colorSecondary</item>
+    </style>
+
+    <style name="myCalc.landOperatorsButton" parent="myCalc.operatorsButton">
+        <item name="shapeAppearance">@style/myCalc.shapeAppearanceLandComponent</item>
+    </style>
+
+    <!-- Scientific keyboard. -->
+    <style name="myCalc.landScientificKeyboardContainer" parent="myCalc.keyboardContainer">
+        <item name="android:background">@drawable/bg_land_scientific_keyboard</item>
+    </style>
+
+    <style name="myCalc.landScientificButton" parent="myCalc.landOperatorsButton">
+    </style>
+</resources>
