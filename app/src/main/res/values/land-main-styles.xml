@@ -34,7 +34,7 @@
 
     <style name="myCalc.landNumbersButton" parent="myCalc.landKeyButton">
         <item name="android:textColor">?attr/colorOnPrimary</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/land_keyboard_buttons</item>
     </style>
 
     <style name="myCalc.landEqualButton" parent="myCalc.landNumbersButton">
