@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.mycalc.model.Operation
 
-@Database(entities = [Operation::class], version = 1)
+@Database(entities = [Operation::class], version = 1, exportSchema = false)
 abstract class OperationDatabase : RoomDatabase() {
     abstract fun operationDao(): OperationDao
 
