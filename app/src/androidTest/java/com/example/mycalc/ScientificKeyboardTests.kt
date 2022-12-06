@@ -45,6 +45,15 @@ class ScientificKeyboardTests {
     }
 
     @Test
+    fun sine() {
+        onView(withId(R.id.button_n8)).perform(click())
+        onView(withId(R.id.button_open_close_scientific_container)).perform(click())
+        onView(withId(R.id.button_sine)).perform(click())
+        onView(withId(R.id.text_first_operand))
+            .check(matches(withText("0.989")))
+    }
+
+    @Test
     fun cos() {
         onView(withId(R.id.button_n8)).perform(click())
         onView(withId(R.id.button_open_close_scientific_container)).perform(click())
@@ -60,15 +69,6 @@ class ScientificKeyboardTests {
         onView(withId(R.id.button_tan)).perform(click())
         onView(withId(R.id.text_first_operand))
             .check(matches(withText("-6.8")))
-    }
-
-    @Test
-    fun sine() {
-        onView(withId(R.id.button_n8)).perform(click())
-        onView(withId(R.id.button_open_close_scientific_container)).perform(click())
-        onView(withId(R.id.button_sine)).perform(click())
-        onView(withId(R.id.text_first_operand))
-            .check(matches(withText("0.989")))
     }
 
     @Test
