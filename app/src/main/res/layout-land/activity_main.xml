@@ -23,7 +23,7 @@
                 style="@style/myCalc.topButton"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
-                android:contentDescription="@string/history_nav_button"
+                android:contentDescription="@string/top_bar_button_history"
                 app:icon="@drawable/ic_top_bar_history_open"
                 app:iconSize="24dp"
                 app:layout_constraintStart_toStartOf="parent"

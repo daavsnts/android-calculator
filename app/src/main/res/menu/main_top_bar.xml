@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/menu_history"
-        android:title="History"
+        android:title="@string/top_bar_button_history"
         android:icon="@drawable/ic_top_bar_history_open"
         app:showAsAction="ifRoom"/>
 </menu>
