@@ -24,7 +24,7 @@
             android:contentDescription="@string/scientific_keyboard_square"
             app:icon="@drawable/ic_scientific_x_pow_two"
             app:iconSize="35dp"
-            app:layout_constraintBottom_toTopOf="@+id/button_ln"
+            app:layout_constraintBottom_toTopOf="@+id/button_sine"
             app:layout_constraintEnd_toStartOf="@+id/button_cube"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
             android:contentDescription="@string/scientific_keyboard_cube"
             app:icon="@drawable/ic_scientific_x_pow_three"
             app:iconSize="35dp"
-            app:layout_constraintBottom_toTopOf="@+id/button_sine"
+            app:layout_constraintBottom_toTopOf="@+id/button_cos"
             app:layout_constraintEnd_toStartOf="@+id/button_ten_pow"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button_square"
@@ -55,27 +55,11 @@
             android:contentDescription="@string/scientific_keyboard_ten_pow"
             app:icon="@drawable/ic_scientific_ten_pow_x"
             app:iconSize="40dp"
-            app:layout_constraintBottom_toTopOf="@+id/button_cos"
+            app:layout_constraintBottom_toTopOf="@+id/button_tan"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button_cube"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_ln"
-            style="@style/myCalc.portraitScientificButton"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:contentDescription="@string/scientific_keyboard_cos"
-            app:icon="@drawable/ic_scientific_cos"
-            app:iconSize="40dp"
-            app:layout_constraintBottom_toTopOf="@+id/button_tan"
-            app:layout_constraintEnd_toStartOf="@+id/button_sine"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_square" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_sine"
@@ -84,14 +68,14 @@
             android:layout_height="0dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:contentDescription="@string/scientific_keyboard_tan"
-            app:icon="@drawable/ic_scientific_tan"
+            android:contentDescription="@string/scientific_keyboard_sine"
+            app:icon="@drawable/ic_scientific_sin"
             app:iconSize="40dp"
-            app:layout_constraintBottom_toTopOf="@+id/button_log_ten"
+            app:layout_constraintBottom_toTopOf="@+id/button_ln"
             app:layout_constraintEnd_toStartOf="@+id/button_cos"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_ln"
-            app:layout_constraintTop_toBottomOf="@+id/button_cube" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_square" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_cos"
@@ -99,17 +83,33 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="8dp"
-            android:contentDescription="@string/scientific_keyboard_sine"
-            app:icon="@drawable/ic_scientific_sin"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/scientific_keyboard_cos"
+            app:icon="@drawable/ic_scientific_cos"
+            app:iconSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_log_ten"
+            app:layout_constraintEnd_toStartOf="@+id/button_tan"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_sine"
+            app:layout_constraintTop_toBottomOf="@+id/button_cube" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_tan"
+            style="@style/myCalc.portraitScientificButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/scientific_keyboard_tan"
+            app:icon="@drawable/ic_scientific_tan"
             app:iconSize="40dp"
             app:layout_constraintBottom_toTopOf="@+id/button_sqrt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_sine"
+            app:layout_constraintStart_toEndOf="@+id/button_cos"
             app:layout_constraintTop_toBottomOf="@+id/button_ten_pow" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_tan"
+            android:id="@+id/button_ln"
             style="@style/myCalc.portraitScientificButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -122,7 +122,7 @@
             app:layout_constraintEnd_toStartOf="@+id/button_log_ten"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_ln" />
+            app:layout_constraintTop_toBottomOf="@+id/button_sine" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_log_ten"
@@ -137,8 +137,8 @@
             app:layout_constraintBottom_toTopOf="@+id/button_pi"
             app:layout_constraintEnd_toStartOf="@+id/button_sqrt"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_tan"
-            app:layout_constraintTop_toBottomOf="@+id/button_sine" />
+            app:layout_constraintStart_toEndOf="@+id/button_ln"
+            app:layout_constraintTop_toBottomOf="@+id/button_cos" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_sqrt"
@@ -153,7 +153,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button_log_ten"
-            app:layout_constraintTop_toBottomOf="@+id/button_cos" />
+            app:layout_constraintTop_toBottomOf="@+id/button_tan" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_round"
@@ -169,7 +169,7 @@
             app:layout_constraintEnd_toStartOf="@+id/button_pi"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_tan" />
+            app:layout_constraintTop_toBottomOf="@+id/button_ln" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_pi"

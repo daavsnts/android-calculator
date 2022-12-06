@@ -41,7 +41,7 @@ class OperationTests {
         onView(withId(R.id.button_divisor)).perform(click())
         onView(withId(R.id.button_n2)).perform(click())
         onView(withId(R.id.button_equal)).perform(click())
-        onView(withId(R.id.text_operation_result)).check(matches(withText("3")))
+        onView(withId(R.id.text_operation_result)).check(matches(withText("1.5")))
     }
 
     @Test
@@ -60,6 +60,15 @@ class OperationTests {
         onView(withId(R.id.button_n2)).perform(click())
         onView(withId(R.id.button_equal)).perform(click())
         onView(withId(R.id.text_operation_result)).check(matches(withText("9")))
+    }
+
+    @Test
+    fun mod() {
+        onView(withId(R.id.button_n8)).perform(click())
+        onView(withId(R.id.button_mod)).perform(click())
+        onView(withId(R.id.button_n3)).perform(click())
+        onView(withId(R.id.button_equal)).perform(click())
+        onView(withId(R.id.text_operation_result)).check(matches(withText("2")))
     }
 
     @Test
@@ -128,6 +137,10 @@ class OperationTests {
         // Change to ^
         onView(withId(R.id.button_pow)).perform(click())
         onView(withId(R.id.text_operator)).check(matches(withText("^")))
+
+        // Change to mod
+        onView(withId(R.id.button_mod)).perform(click())
+        onView(withId(R.id.text_operator)).check(matches(withText("mod")))
     }
 
     @Test
