@@ -32,7 +32,7 @@
 
     <style name="myCalc.portraitNumbersButton" parent="myCalc.portraitKeyButton">
         <item name="android:textColor">?attr/colorOnPrimary</item>
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">@dimen/portrait_keyboard_buttons</item>
     </style>
 
     <style name="myCalc.portraitEqualButton" parent="myCalc.portraitNumbersButton">
