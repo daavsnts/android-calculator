@@ -66,7 +66,7 @@
         <item name="iconGravity">textStart</item>
         <item name="iconPadding">0dp</item>
         <item name="iconTint">?attr/colorSecondary</item>
-        <item name="rippleColor">?attr/colorSecondary</item>
+        <item name="rippleColor">?attr/colorControlHighlight</item>
         <item name="android:textSize">30sp</item>
     </style>
 
@@ -90,12 +90,12 @@
     <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
         <item name="android:fontFamily">@font/roboto_bold</item>
         <item name="android:textColor">?attr/colorSecondary</item>
-        <item name="rippleColor">@color/white_ripple</item>
+        <item name="rippleColor">?attr/colorControlHighlight</item>
     </style>
 
     <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
         <item name="android:fontFamily">@font/roboto_bold</item>
         <item name="android:textColor">?attr/colorSecondary</item>
-        <item name="rippleColor">@color/white_ripple</item>
+        <item name="rippleColor">?attr/colorControlHighlight</item>
     </style>
 </resources>
