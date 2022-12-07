@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.mycalc'
+    namespace 'com.daavsnts.calculator'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.mycalc"
+        applicationId "com.daavsnts.calculator"
         minSdk 23
         targetSdk 33
         versionCode 1

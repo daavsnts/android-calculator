@@ -111,7 +111,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/keyboard_fragment_container_view"
-                android:name="com.example.mycalc.view.fragments.PortraitKeyboardFragment"
+                android:name="com.daavsnts.calculator.view.fragments.PortraitKeyboardFragment"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -171,7 +171,7 @@
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/scientific_fragment_container_view"
-                    android:name="com.example.mycalc.view.fragments.PortraitScientificKeyboardFragment"
+                    android:name="com.daavsnts.calculator.view.fragments.PortraitScientificKeyboardFragment"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="30dp"
