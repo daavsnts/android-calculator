@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/keyboardFragment"
-        android:name="com.example.mycalc.view.fragments.PortraitKeyboardFragment"
+        android:name="com.daavsnts.calculator.view.fragments.PortraitKeyboardFragment"
         android:label="KeyboardFragment"
         tools:layout="@layout/fragment_portrait_keyboard">
     </fragment>
