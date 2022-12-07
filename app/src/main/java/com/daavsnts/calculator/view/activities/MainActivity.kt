@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout.LayoutParams.MATCH_CONSTRAINT
 import androidx.core.view.updateLayoutParams
 import androidx.databinding.DataBindingUtil
-import com.daavsnts.calculator.MyCalcApplication
+import com.daavsnts.calculator.CalculatorApplication
 import com.daavsnts.calculator.R
 import com.daavsnts.calculator.databinding.ActivityMainBinding
 import com.daavsnts.calculator.model.Operation
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     private lateinit var landKeyboardButtons: List<Button?>
     private lateinit var landScientificKeyboardButtons: List<Button?>
     private val operationViewModel: OperationViewModel by viewModels {
-        OperationViewModelFactory((application as MyCalcApplication).repository)
+        OperationViewModelFactory((application as CalculatorApplication).repository)
     }
     private val getOperationFromHistory = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()

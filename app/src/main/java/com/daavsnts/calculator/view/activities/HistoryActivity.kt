@@ -8,7 +8,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.daavsnts.calculator.MyCalcApplication
+import com.daavsnts.calculator.CalculatorApplication
 import com.daavsnts.calculator.R
 import com.daavsnts.calculator.databinding.ActivityHistoryBinding
 import com.daavsnts.calculator.model.Operation
@@ -22,7 +22,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 class HistoryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHistoryBinding
     private val operationViewModel: OperationViewModel by viewModels {
-        OperationViewModelFactory((application as MyCalcApplication).repository)
+        OperationViewModelFactory((application as CalculatorApplication).repository)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
