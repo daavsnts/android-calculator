@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_main_constraint_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_app"
         tools:context=".view.activities.MainActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/display_ConstraintLayout"
+            android:id="@+id/display_constraint_layout"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal_divisor"
@@ -34,8 +35,8 @@
                 style="@style/myCalc.landOperationText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/display_first_operand"
                 android:layout_marginTop="10dp"
+                android:contentDescription="@string/display_first_operand"
                 app:layout_constraintEnd_toStartOf="@+id/text_operator"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,8 +53,8 @@
                 style="@style/myCalc.landOperationText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/display_second_operand"
                 android:layout_marginEnd="15dp"
+                android:contentDescription="@string/display_second_operand"
                 app:layout_constraintBaseline_toBaselineOf="@+id/text_operator"
                 app:layout_constraintEnd_toEndOf="parent" />
 
@@ -74,8 +75,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
                 android:layout_marginBottom="10dp"
-                android:textSize="35sp"
                 android:contentDescription="@string/display_operation_result"
+                android:textSize="35sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_second_operand" />
@@ -396,7 +397,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_divider"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/display_ConstraintLayout">
+            app:layout_constraintTop_toBottomOf="@+id/display_constraint_layout">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_square"
