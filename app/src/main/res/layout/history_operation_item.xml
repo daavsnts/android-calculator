@@ -61,7 +61,7 @@
             style="@style/myCalc.bottomButton"
             android:contentDescription="@string/history_button_item_copy_operation"
             app:icon="@drawable/ic_history_item_copy"
-            app:iconSize="25dp"
+            app:iconSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="TouchTargetSizeCheck" />
@@ -72,7 +72,7 @@
             android:layout_marginStart="5dp"
             android:contentDescription="@string/history_button_item_delete_operation"
             app:icon="@drawable/ic_history_item_delete"
-            app:iconSize="25dp"
+            app:iconSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/button_copy_operation"
             tools:ignore="TouchTargetSizeCheck" />

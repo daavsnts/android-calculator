@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name=".MyCalcApplication"
+        android:name=".CalculatorApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
+        android:logo="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"

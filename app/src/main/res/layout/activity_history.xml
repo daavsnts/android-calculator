@@ -25,7 +25,8 @@
                 app:menu="@menu/history_top_bar"
                 app:title="History"
                 app:titleCentered="true"
-                app:navigationIcon="@drawable/ic_top_bar_arrow_back"/>
+                app:navigationIcon="@drawable/ic_top_bar_arrow_back"
+                app:navigationContentDescription="@string/top_bar_button_back"/>
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.recyclerview.widget.RecyclerView
