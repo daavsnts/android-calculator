@@ -36,11 +36,11 @@ Made following <b>Clean Code</b> and <b>Android conventions</b> from <b>Google c
 <h2>👀 Previews</h2>
 </br>
 <div align="center"><p float="left">
-  <img src="https://github.com/daavsnts/calculator/raw/main/images/main-screen-light.jpg" width="435" />
-  <img src="https://github.com/daavsnts/calculator/raw/main/images/main-screen-light-and-dark.jpg" width="435" /> 
+  <img src="https://github.com/daavsnts/calculator/raw/main/images/main-screen-light.jpg" width="400" />
+  <img src="https://github.com/daavsnts/calculator/raw/main/images/main-screen-light-and-dark.jpg" width="400" /> 
 </p></div>
 <div align="center"><p float="left">
-  <img src="https://github.com/daavsnts/calculator/raw/main/images/main-screen-scientific-keyboard-dark.jpg" width="435" />
-  <img src="https://github.com/daavsnts/calculator/raw/main/images/history-screen-light.jpg" width="435" /> 
+  <img src="https://github.com/daavsnts/calculator/raw/main/images/main-screen-scientific-keyboard-dark.jpg" width="400" />
+  <img src="https://github.com/daavsnts/calculator/raw/main/images/history-screen-light.jpg" width="400" /> 
 </p></div>
-<div align="center"><img src="https://github.com/daavsnts/calculator/raw/main/images/landscape-screens.jpg" width="874" /></div>
+<div align="center"><img src="https://github.com/daavsnts/calculator/raw/main/images/landscape-screens.jpg" width="800" /></div>
