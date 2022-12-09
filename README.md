@@ -1,6 +1,6 @@
 <h1 align="center"><img src="https://github.com/daavsnts/calculator/raw/main/images/banner-presentation.jpg"></h1>
 
-<p align="center"><b>An simple and beauty Calculator</b> made with <b>Kotlin</b> to <b>Android</b> devices.</br>
+<p align="center"><b>A simple and beautiful Calculator</b> made with <b>Kotlin</b> to <b>Android</b> devices.</br>
 Made following <b>Clean Code</b> and <b>Android conventions</b> from <b>Google codelabs</b>.</br></p>
 <p align="center">
 🔍 The app is currently <b>under review</b> for <b>publication</b> in the <b>Play Store</b>.</p>
