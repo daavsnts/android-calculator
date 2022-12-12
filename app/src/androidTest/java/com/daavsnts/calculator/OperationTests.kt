@@ -65,7 +65,9 @@ class OperationTests {
     @Test
     fun mod() {
         onView(withId(R.id.button_n8)).perform(click())
+        onView(withId(R.id.button_open_close_scientific_container)).perform(click())
         onView(withId(R.id.button_mod)).perform(click())
+        onView(withId(R.id.button_open_close_scientific_container)).perform(click())
         onView(withId(R.id.button_n3)).perform(click())
         onView(withId(R.id.button_equal)).perform(click())
         onView(withId(R.id.text_operation_result)).check(matches(withText("2")))
@@ -139,7 +141,9 @@ class OperationTests {
         onView(withId(R.id.text_operator)).check(matches(withText("^")))
 
         // Change to mod
+        onView(withId(R.id.button_open_close_scientific_container)).perform(click())
         onView(withId(R.id.button_mod)).perform(click())
+        onView(withId(R.id.button_open_close_scientific_container)).perform(click())
         onView(withId(R.id.text_operator)).check(matches(withText("mod")))
     }
 

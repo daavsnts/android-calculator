@@ -24,6 +24,9 @@ class ValidationsTests {
         onView(withId(R.id.button_multiply)).perform(click())
         onView(withId(R.id.button_divisor)).perform(click())
         onView(withId(R.id.button_pow)).perform(click())
+        onView(withId(R.id.button_open_close_scientific_container)).perform(click())
+        onView(withId(R.id.button_mod)).perform(click())
+        onView(withId(R.id.button_open_close_scientific_container)).perform(click())
         onView(withId(R.id.text_operator)).check(matches(withText("")))
     }
 
