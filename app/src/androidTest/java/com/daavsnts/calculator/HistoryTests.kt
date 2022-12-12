@@ -57,14 +57,8 @@ class HistoryTests {
         clickOnViewInItemList(R.id.button_delete_operation, R.id.rv_operations)
         clickDialogButtonWithDescription(R.string.history_dialog_confirm)
 
-        // click first operation on history
-        clickListItem(R.id.rv_operations, 0)
-
-        // check if the operation on main is the same that has clicked on history
-        onView(withId(R.id.text_first_operand)).check(matches(withText("1")))
-        onView(withId(R.id.text_operator)).check(matches(withText("+")))
-        onView(withId(R.id.text_second_operand)).check(matches(withText("1")))
-        onView(withId(R.id.text_operation_result)).check(matches(withText("2")))
+        // check if history is empty
+        assertListItemCount(R.id.rv_operations, 0)
     }
 
     @Test
