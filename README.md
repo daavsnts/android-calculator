@@ -3,7 +3,7 @@
 <p align="center"><b>A simple and beautiful Calculator</b> made with <b>Kotlin</b> to <b>Android</b> devices.</br>
 Made following <b>Clean Code</b> and <b>Android conventions</b> from <b>Google codelabs</b>.</br></p>
 <p align="center">
-<a href="play.google.com/store/apps/details?id=com.daavsnts.calculator"><img src="https://github.com/daavsnts/calculator/raw/main/images/google-play-button.svg" width="200" /></a>
+<a href="https://play.google.com/store/apps/details?id=com.daavsnts.calculator"><img src="https://github.com/daavsnts/calculator/raw/main/images/google-play-button.svg" width="200" /></a>
 
 <h2>⚙️ Technologies used in this app</h2>
 <ul>
