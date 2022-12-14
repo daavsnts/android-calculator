@@ -8,7 +8,7 @@ Made following <b>Clean Code</b> and <b>Android conventions</b> from <b>Google c
 <h2>⚙️ Technologies used in this app</h2>
 <ul>
   <li><b>Architecture:</b> MVVM/Clean Architecture.</li>
-  <li><b>Layout:</b> ConstraintLayout, Databinding.</li>
+  <li><b>Layout:</b> ConstraintLayout, View/databinding.</li>
   <li><b>Design Patterns:</b> LiveData, Flow, Singleton</li>
   <li><b>Database:</b> Room.</li>
   <li><b>Threading:</b> Coroutines.</li>
