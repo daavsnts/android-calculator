@@ -27,7 +27,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button_plus"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_dot"
+            app:layout_constraintStart_toEndOf="@+id/button_n0"
             app:layout_constraintTop_toBottomOf="@+id/button_n3"
             tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
@@ -125,23 +125,23 @@
             android:layout_marginEnd="12dp"
             android:contentDescription="@string/keyboard_number_one"
             app:icon="@drawable/ic_number_button_n1"
-            app:layout_constraintBottom_toTopOf="@+id/button_n0"
+            app:layout_constraintBottom_toTopOf="@+id/button_dot"
             app:layout_constraintEnd_toStartOf="@+id/button_n2"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button_n4" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_n0"
+            android:id="@+id/button_dot"
             style="@style/myCalc.portraitNumbersButton"
             android:layout_marginStart="12dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="8dp"
             android:contentDescription="@string/keyboard_number_zero"
-            app:icon="@drawable/ic_number_button_n0"
+            app:icon="@drawable/ic_number_button_dot"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button_dot"
+            app:layout_constraintEnd_toStartOf="@+id/button_n0"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button_n1" />
@@ -179,24 +179,24 @@
             android:layout_marginEnd="12dp"
             android:contentDescription="@string/keyboard_number_two"
             app:icon="@drawable/ic_number_button_n2"
-            app:layout_constraintBottom_toTopOf="@+id/button_dot"
+            app:layout_constraintBottom_toTopOf="@+id/button_n0"
             app:layout_constraintEnd_toStartOf="@+id/button_n3"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button_n1"
             app:layout_constraintTop_toBottomOf="@+id/button_n5" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_dot"
+            android:id="@+id/button_n0"
             style="@style/myCalc.portraitNumbersButton"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="8dp"
             android:contentDescription="@string/keyboard_dot"
-            app:icon="@drawable/ic_number_button_dot"
+            app:icon="@drawable/ic_number_button_n0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button_equal"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_n0"
+            app:layout_constraintStart_toEndOf="@+id/button_dot"
             app:layout_constraintTop_toBottomOf="@+id/button_n2" />
 
         <com.google.android.material.button.MaterialButton
