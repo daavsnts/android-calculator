@@ -8,12 +8,12 @@ Made following <b>Clean Code</b> and <b>Android conventions</b> from <b>Google c
 <h2>⚙️ Technologies used in this app</h2>
 <ul>
   <li><b>Architecture:</b> MVVM/Clean Architecture.</li>
-  <li><b>Layout:</b> ConstraintLayout, View/databinding.</li>
-  <li><b>Design Patterns:</b> LiveData, Flow, Singleton</li>
+  <li><b>Layout:</b> ConstraintLayout using View/databinding.</li>
+  <li><b>State:</b> LiveData, Flow</li>
   <li><b>Database:</b> Room.</li>
   <li><b>Threading:</b> Coroutines.</li>
-  <li><b>Theming:</b> Material.</li>
-  <li><b>Navigation:</b> Activities and Fragments.</li>
+  <li><b>Theming:</b> Material Light/Dark Theme.</li>
+  <li><b>Screens:</b> Activities and Fragments.</li>
   <li><b>Tests:</b> Espresso, Barista, JUnit.</li>
   <li><b>UX/UI:</b> Figma</li>
   <li><b>Graphic Design:</b> Adobe Photoshop</li>
