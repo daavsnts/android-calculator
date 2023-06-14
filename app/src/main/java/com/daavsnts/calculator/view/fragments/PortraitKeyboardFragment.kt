@@ -21,8 +21,12 @@ class PortraitKeyboardFragment : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentPortraitKeyboardBinding.inflate(inflater, container, false)
-        setKeyboardButtonsListeners()
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setKeyboardButtonsListeners()
     }
 
     private fun setKeyboardButtonsListeners() {

@@ -21,8 +21,12 @@ class PortraitScientificKeyboardFragment : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentPortraitScientificKeyboardBinding.inflate(inflater, container, false)
-        setScientificKeyListeners()
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setScientificKeyListeners()
     }
 
     private fun setScientificKeyListeners() {
