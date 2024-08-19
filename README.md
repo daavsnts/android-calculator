@@ -9,7 +9,7 @@ Made following <b>Clean Code</b> and <b>Android conventions</b> from <b>Google c
 <ul>
   <li><b>Architecture:</b> MVVM/Clean Architecture.</li>
   <li><b>Layout:</b> ConstraintLayout using View/databinding.</li>
-  <li><b>State:</b> LiveData, Flow</li>
+  <li><b>State:</b> LiveData</li>
   <li><b>Database:</b> Room.</li>
   <li><b>Threading:</b> Coroutines.</li>
   <li><b>Theming:</b> Material Light/Dark Theme.</li>
